@@ -6,6 +6,8 @@ public class something {
 	{
 		System.out.println("Hello World");
 	}
-	
-
+	public float bob() {
+		return true;
+		
+	}
 }
