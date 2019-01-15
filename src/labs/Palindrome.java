@@ -1,4 +1,8 @@
 package labs;
+/*Kush Dalal
+ * 1/13/19  AP Comp Sci A
+ */
+
 
 public class Palindrome
 {
@@ -31,7 +35,7 @@ public class Palindrome
 		return isPalindrome; //return if its true or false
 
 	}
-	/*
+	
 	//------This is pointless and purely because i was forced to add it ------\\
 	private static boolean isLetter(String letter) 
 	{
@@ -41,7 +45,7 @@ public class Palindrome
 		}
 		return isLetter; //return true or false;
 	}
-	//------------------------------------------------------------------------\\
+	
 
 	//Again a pointless method, i just need to have it apperntly\\
 	private static String purge(String s)
@@ -66,7 +70,8 @@ public class Palindrome
 		//See the below method almostPal, the reason it should be done in almostPal rather than a seperate method is due to efficiency, no need to try carry over a variable that comes from 4 lines of code.
 		return endString; 
 	}
-*/
+
+	//------------------------------------------------------------------------\\
 	
 	
 	public static boolean almostPal(String s)
@@ -76,6 +81,7 @@ public class Palindrome
 		String s2;
 		String s3;
 		String s4;
+		String s5;
 		// -----------------------\\
 		
 		if (s.contains(" ")) //check if theres a space so it can be and Almost Pal
@@ -84,9 +90,10 @@ public class Palindrome
 			s2 = s.replaceAll(" ", "");
 			s3 = s2.replaceAll(",", "");
 			s4 = s3.replaceAll("'", "");
+			s5 = s4.replaceAll(";", "");
 			//this was here for some testing purposes: System.out.println(s4);
 			///////////////////////////////////////////
-			if (isPal(s4)) //Run the script from above that tests for a palindrome now that there are now special chars
+			if (isPal(s5)) //Run the script from above that tests for a palindrome now that there are now special chars
 			{
 				isAlmostPal = true;
 			}

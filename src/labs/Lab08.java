@@ -22,7 +22,7 @@ public class Lab08
 			System.out.println("Almost Palindrome:  " + Palindrome.almostPal(str));	  // used only for the 100 point version
 			System.out.print("Do you wish to repeat this program [Y/N]?  ===>>  ");
 			String repeat = input.nextLine();
-			notFinished = (repeat.equalsIgnoreCase("y"));
+			notFinished = (repeat.equalsIgnoreCase("y")); //This was the more efficient way of doing things
 			System.out.println();
 		}
 		while (notFinished);
