@@ -84,7 +84,7 @@ public class Palindrome
 		String s5;
 		// -----------------------\\
 		
-		if (s.contains(" ")) //check if theres a space so it can be and Almost Pal
+		if (s.contains(" ")) //check if there's a space so it can be and Almost Pal
 		{
 			//////replace all the weird characters//////
 			s2 = s.replaceAll(" ", "");
