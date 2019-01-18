@@ -2,7 +2,7 @@
 // Kush Dalal
 // The "Palindrome" Program
 // This is the student starting file for Lab08.
-package labs;
+package lab8;
 
 import java.util.Scanner;
 

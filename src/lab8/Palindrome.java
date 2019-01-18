@@ -1,4 +1,4 @@
-package labs;
+package lab8;
 /*Kush Dalal
  * 1/13/19  AP Comp Sci A
  */
