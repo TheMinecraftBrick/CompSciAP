@@ -69,7 +69,7 @@ public class Palindrome
 			endString = s4;
 			
 		}
-		//See the below method almostPal, the reason it should be done in almostPal rather than a seperate method is due to efficiency, no need to try carry over a variable that comes from 4 lines of code.
+		//See the below method almostPal, the reason it should be done in almostPal rather than a separate method is due to efficiency, no need to try carry over a variable that comes from 4 lines of code.
 		return endString; 
 	}
 
