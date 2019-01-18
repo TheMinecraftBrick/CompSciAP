@@ -10,7 +10,8 @@ public class Lab08
 {
 	public static void main (String[] args)
 	{
-      Scanner input = new Scanner(System.in);
+      @SuppressWarnings("resource")
+	Scanner input = new Scanner(System.in);
 		boolean notFinished = false;
 		do
 		{

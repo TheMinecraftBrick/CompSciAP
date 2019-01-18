@@ -37,6 +37,7 @@ public class Palindrome
 	}
 	
 	//------This is pointless and purely because i was forced to add it ------\\
+	@SuppressWarnings("unused")
 	private static boolean isLetter(String letter) 
 	{
 		boolean isLetter = false; //a boolean for if its a letter
@@ -48,6 +49,7 @@ public class Palindrome
 	
 
 	//Again a pointless method, i just need to have it apperntly\\
+	@SuppressWarnings("unused")
 	private static String purge(String s)
 	{
 		// ------ Variables ------\\
@@ -57,7 +59,7 @@ public class Palindrome
 		String s4;
 		// -----------------------\\
 		
-		if (s.contains(" ")) //check if theres a space so it can be and Almost Pal
+		if (s.contains(" ")) //check if there's a space so it can be and Almost Pal
 		{
 			//////replace all the weird characters//////
 			s2 = s.replaceAll(" ", "");
@@ -84,7 +86,7 @@ public class Palindrome
 		String s5;
 		// -----------------------\\
 		
-		if (s.contains(" ")) //check if theres a space so it can be and Almost Pal
+		if (s.contains(" ")) //check if there's a space so it can be and Almost Pal
 		{
 			//////replace all the weird characters//////
 			s2 = s.replaceAll(" ", "");
@@ -97,7 +99,7 @@ public class Palindrome
 			{
 				isAlmostPal = true;
 			}
-		}else //if theres no spaces then it must be one word
+		}else //if there's no spaces then it must be one word
 		{ 
 			isAlmostPal = false;
 		}
