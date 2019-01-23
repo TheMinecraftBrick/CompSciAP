@@ -2,10 +2,14 @@ package lab9;
 
 public class Rational
 {
-
+	public double numerator;
+	public double denominator;
+	
 	public Rational(int num, int den)
 	{
-		
+		numerator = num;
+		denominator = den;
+	
 	}
 
 	public void displayData()
@@ -17,18 +21,21 @@ public class Rational
 
 	private String getDecimal()
 	{
-		
-		return null;
+		double decimal = numerator/denominator;
+		String stringDec = Double.toString(decimal);
+		return stringDec;
 	}
 
 	private String getDen()
 	{
-				return null;
+		String stringDen = Double.toString(denominator);
+		return stringDen;
 	}
 
 	private String getNum()
 	{
-				return null;
+		String stringNum = Double.toString(numerator);
+		return stringNum;
 	}
 
 	private void getGCF(int n1, int n2)
