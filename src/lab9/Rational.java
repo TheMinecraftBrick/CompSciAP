@@ -4,7 +4,10 @@ public class Rational
 {
 	public double numerator;
 	public double denominator;
-	
+	int gcf = 0;
+	int reducedNum;
+	int reducedDen;
+
 	public Rational(int num, int den)
 	{
 		numerator = num;
@@ -15,8 +18,24 @@ public class Rational
 	public void displayData()
 	{
 		System.out.println();
-		System.out.println(getNum() + "/" + getDen() + " equals " + getDecimal());
+		System.out.println(getOriginal() + " equals " + getDecimal());
 		System.out.println();
+		getGCF((int)numerator, (int)denominator);
+		reduce();
+		System.out.println("and reduces to " + getReduced());
+		System.out.println();
+	}
+	
+	private void reduce() 
+	{
+		reducedNum = (int) (numerator/gcf);
+		reducedDen = (int) (denominator/gcf);
+	}
+
+	private String getReduced()
+	{
+		String reducedString = reducedNum + "/" + reducedDen;
+		return reducedString;
 	}
 
 	private String getDecimal()
@@ -26,16 +45,10 @@ public class Rational
 		return stringDec;
 	}
 
-	private String getDen()
+	private String getOriginal()
 	{
-		String stringDen = Double.toString(denominator);
-		return stringDen;
-	}
-
-	private String getNum()
-	{
-		String stringNum = Double.toString(numerator);
-		return stringNum;
+		String endString = (int) numerator + "/" + (int) denominator;
+		return endString;
 	}
 
 	private void getGCF(int n1, int n2)
@@ -44,7 +57,7 @@ public class Rational
 		do
 		{
 			rem = n1 % n2;
-			int gcf;
+			
 			if (rem == 0)
 				gcf = n2;
 			else

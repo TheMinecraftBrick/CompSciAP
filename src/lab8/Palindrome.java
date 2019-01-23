@@ -82,20 +82,18 @@ public class Palindrome
 		boolean isAlmostPal = false;
 		String s2;
 		String s3;
-		String s4;
-		String s5;
+
 		// -----------------------\\
 		
 		if (s.contains(" ")) //check if there's a space so it can be and Almost Pal
 		{
 			//////replace all the weird characters//////
-			s2 = s.replaceAll(" ", "");
-			s3 = s2.replaceAll(",", "");
-			s4 = s3.replaceAll("'", "");
-			s5 = s4.replaceAll(";", "");
-			//this was here for some testing purposes: System.out.println(s4);
+			s2 = s.replaceAll("[^A-Za-z0-9]", "");
+			s3 = s2.replaceAll(" ", "");
+			
+			//this was here for some testing purposes: System.out.println(s3);
 			///////////////////////////////////////////
-			if (isPal(s5)) //Run the script from above that tests for a palindrome now that there are now special chars
+			if (isPal(s3)) //Run the script from above that tests for a palindrome now that there are now special chars
 			{
 				isAlmostPal = true;
 			}

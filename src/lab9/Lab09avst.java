@@ -27,6 +27,20 @@ public class Lab09avst
 	}
 }
 
+//-----------Lab notes for lab 9a-----------\\
+/*
+ * the first step was to make sure the decimal returned a double, so i made the numerator and denominator a double
+ * then cast them to ints when used later on, for simplicity.
+ * Next, in the get orginal method i simply put in my numerator and denominator along with a /, which thne compiled into one
+ * large string to return. 
+ * 
+ * the get decimal method simply defines a double which i then mathematically divide the numerator and denominator
+ * to a decimal, which is then returned
+ * 
+ * lastly, for reducing, once i get the gcf, i simply divide the original numerator and denominators by the gcf
+ * to get the reduced numerators and denominators. Lastly i compile it to a string and return that.
+ */
+//------------------------------------------\\
 
 
 
