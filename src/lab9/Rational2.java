@@ -14,8 +14,8 @@ public class Rational2
 
 		public Rational2(int num1, int den1)
 		{
-			firstNum = num1;
-			firstDen = den1;
+			firstNum = num1; // define the first numerator as the input
+			firstDen = den1; // define the first denominator as the input
 		}
 		
 		
@@ -23,10 +23,15 @@ public class Rational2
 
 		public Rational2()
 		{
-			// TODO Auto-generated constructor stub
+			//A simple placeholder
 		}
 
-
+		private void reduce() 
+		{
+			getGCF(firstNum, firstDen); //get the gcf when we reduce
+			reducedNum = firstNum/gcf;	//actually reduce it 
+			reducedDen = firstDen/gcf;
+		}
 
 
 		private void getGCF(int n1,int n2)
@@ -56,22 +61,48 @@ public class Rational2
 
 		public void multiply(Rational2 r1, Rational2 r2)
 		{
-		  int multiplied = r1.getOriginal() * r2.getOriginal();
-			
+		  this.firstNum = r1.firstNum * r2.firstNum;
+		  this.firstDen = r1.firstDen * r2.firstDen;
+		  reduce();
+		  
 		}
 
 
 		public void divide(Rational2 r1, Rational2 r2)
 		{
-			// TODO Auto-generated method stub
+			this.firstNum = r1.firstNum * r2.firstDen;
+			this.firstDen = r1.firstDen * r2.firstNum;
+			reduce();
 			
 		}
 
 
 		public String getReduced()
 		{
-			// TODO Auto-generated method stub
-			return null;
+			String reducedString = reducedNum + "/" + reducedDen;
+			return reducedString;
+		}
+
+
+
+
+		public void add(Rational2 r1, Rational2 r2)
+		{
+			this.firstNum = (r1.firstNum * r2.firstDen) + (r2.firstNum * r1.firstDen);
+			this.firstDen = r1.firstDen * r2.firstDen;
+			reduce();
+		
+		}
+
+
+
+
+		public void subtract(Rational2 r1, Rational2 r2)
+		{
+			this.firstNum = (r1.firstNum * r2.firstDen) - (r2.firstNum * r1.firstDen);
+			this.firstDen = r1.firstDen * r2.firstDen;
+			reduce();
+			
 		}
 
 

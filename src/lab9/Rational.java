@@ -20,7 +20,7 @@ public class Rational
 		System.out.println();
 		System.out.println(getOriginal() + " equals " + getDecimal());
 		System.out.println();
-		getGCF((int)numerator, (int)denominator);
+		getGCF((int)numerator, (int)denominator); //get the gcf when we reduce
 		reduce();
 		System.out.println("and reduces to " + getReduced());
 		System.out.println();
