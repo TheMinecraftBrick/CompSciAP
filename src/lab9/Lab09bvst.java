@@ -31,7 +31,7 @@ public class Lab09bvst
 		System.out.println();
 
 	}
-
+	//Input//
 	public static void enterData()
 	{
 		@SuppressWarnings("resource")
@@ -46,3 +46,16 @@ public class Lab09bvst
 		den2 = input.nextInt();
 	}
 }
+
+//Lab notebook for Lab09b
+/* 
+ * After taking what i got from lab 9a, i had to add a couple new methods involving the multiple inputs.
+ * That would be the Rational2 class. From there i took to reducing, by copy pasting code from the first
+ * lab. next i had to work on multiplying and dividing. this was easily done by using the this method and
+ * just multiplying the numerators and denominators. As for division, i just multiplied by the reciprocals
+ * Next i had to do addition, this was a bit trickier as i had to get the common denominator, which i did 
+ * by just multiplying by the opposite denominators. For subtraction, i just had to replace the sign. 
+ * Lastly, i just made sure it all ran properly and was all compiled, and thats that.
+ * 
+ * 
+ */ 

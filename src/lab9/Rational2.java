@@ -36,6 +36,8 @@ public class Rational2
 
 		private void getGCF(int n1,int n2)
 		{
+			
+			//-------------get the gcf-------------\\
 			int rem = 0;
 			do
 			{
@@ -49,38 +51,39 @@ public class Rational2
 				}
 			}
 			while (rem != 0);
+			//-------------------------------------\\
 		}
 
 
 		public String getOriginal()
 		{
-			String endString = firstNum + "/" + firstDen;
-			return endString;
+			String endString = firstNum + "/" + firstDen; //compile the numbers to a string
+			return endString; //return that string
 		}
 
 
 		public void multiply(Rational2 r1, Rational2 r2)
 		{
-		  this.firstNum = r1.firstNum * r2.firstNum;
-		  this.firstDen = r1.firstDen * r2.firstDen;
-		  reduce();
+		  this.firstNum = r1.firstNum * r2.firstNum; //multiply the first numerator of the first number, by the numerator of the second number
+		  this.firstDen = r1.firstDen * r2.firstDen; //do the same for the denominator
+		  reduce(); //reduce these numbers
 		  
 		}
 
 
 		public void divide(Rational2 r1, Rational2 r2)
 		{
-			this.firstNum = r1.firstNum * r2.firstDen;
-			this.firstDen = r1.firstDen * r2.firstNum;
-			reduce();
+			this.firstNum = r1.firstNum * r2.firstDen; // to divide fractions you have to multiply the reciprocal. so thats what i do here
+			this.firstDen = r1.firstDen * r2.firstNum; // the same with the denominator now
+			reduce(); //annnnndddd reduce.
 			
 		}
 
 
 		public String getReduced()
 		{
-			String reducedString = reducedNum + "/" + reducedDen;
-			return reducedString;
+			String reducedString = reducedNum + "/" + reducedDen; //compile the reduced numbers to a string
+			return reducedString; // return that string
 		}
 
 
@@ -88,9 +91,9 @@ public class Rational2
 
 		public void add(Rational2 r1, Rational2 r2)
 		{
-			this.firstNum = (r1.firstNum * r2.firstDen) + (r2.firstNum * r1.firstDen);
+			this.firstNum = (r1.firstNum * r2.firstDen) + (r2.firstNum * r1.firstDen); //add the numerators by getting a common denominator then adding
 			this.firstDen = r1.firstDen * r2.firstDen;
-			reduce();
+			reduce(); //reduce once agani
 		
 		}
 
@@ -99,7 +102,7 @@ public class Rational2
 
 		public void subtract(Rational2 r1, Rational2 r2)
 		{
-			this.firstNum = (r1.firstNum * r2.firstDen) - (r2.firstNum * r1.firstDen);
+			this.firstNum = (r1.firstNum * r2.firstDen) - (r2.firstNum * r1.firstDen); //same thing as adding, just a subtraction sign now.
 			this.firstDen = r1.firstDen * r2.firstDen;
 			reduce();
 			
