@@ -6,6 +6,8 @@
 // This is the student, starting version of the Lab11a assignment.
 package lab11;
 
+import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lab11avst
@@ -23,6 +25,8 @@ public class Lab11avst
 
 	public static void computePrimes(boolean primes[])
 	{
+		System.out.println("\nCOMPUTING PRIME NUMBERS");
+
 		for (int i = 0; i < primes.length; i++)
 		{
 			primes[i] = true;
@@ -31,18 +35,38 @@ public class Lab11avst
 		for (int i = 0; i < primes.length; i++)
 		{
 			if (primes[i])
-			{
 				primes[i] = isPrime(i);
+
+			if (primes[i])
+			{
+				for (int j = i * i; j < primes.length; j += i)
+				{
+					primes[j] = false;
+				}
 			}
+
 		}
-		System.out.println("\nCOMPUTING PRIME NUMBERS");
 
 	}
 
 	public static void displayPrimes(boolean primes[])
 	{
+		DecimalFormat DF = new DecimalFormat("0000");
 		System.out.println("\n\nPRIMES BETWEEN 1 AND " + primes.length);
-		System.out.println(primes);
+		int k = 10;
+		for (int i = 0; i < primes.length; i++)
+		{
+			if (primes[i])
+			{
+				System.out.print(DF.format(i) + " ");
+				if(i % 10 == 0)
+				{
+					System.out.println("");
+				}
+				
+			}
+
+		}
 
 	}
 
@@ -56,7 +80,7 @@ public class Lab11avst
 			}
 		}
 		if (num <= 1)
-			return false; 
+			return false;
 		else
 			return true;
 
