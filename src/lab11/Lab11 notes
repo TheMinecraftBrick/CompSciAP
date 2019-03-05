@@ -1,0 +1,12 @@
+The first step was to create the array. because i had previous knowledge in arrays work with this should be easy. 
+The next step was to compute the primes. First i set every number in the array (using a for loop) to true
+Next i went and checked every number and if it was true check it for real using the isPrime method described
+later. 
+In the isPrime method i use the division method, checkign each number to see if it is prime, if the remaineder is 0, 
+it is not prime, any number less than or equal to one is also not prime. all other numbers should be prime then.
+back to the top, after i have defined which numbers are an arent prime, i mutliply by itself and add 1 to get every
+ possible prime number in that range.
+ lastly, for displaying my primes, i just simply output it using a sysout statement. additionally to drop down a
+ line every 1 numbers, i made a drop integer which adds a line break anytime the remainder of 15 is 0. I had some 
+ trouble figuring this out as the 15 number was a weird number to use. I also had to put format the numbers using 
+ the decimal format method. all in all, it was a rather simple lab, with a few hiccups here and there.
