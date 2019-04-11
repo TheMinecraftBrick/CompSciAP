@@ -28,14 +28,14 @@ class Deck
 
 	public Deck() 
    {
-		size = 52;
+		size = 52;	
 		cards = new Card[size];
 		
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 13; j++)
 		{
-			cards[] = new Card(suits[i], rank[i], numbers[i]);
+			cards[i] = new Card(suits[i], rank[j], numbers[j]);
 			
 		}
 	}
