@@ -17,7 +17,7 @@ public class Lab17avst
 		System.out.println("Counting from 10 down to 1");
 		Test.countDown(1,10);
 		skip3();
-		System.out.println("The sum of all integers 0 to 100 " + Test.sum(100));
+		System.out.println("The sum of all integers 0 to 100 is " + Test.sum(100));
 		skip2();	
 		System.out.println("The factorial of 8 is " + Test.factorial(8));
 		skip2();
