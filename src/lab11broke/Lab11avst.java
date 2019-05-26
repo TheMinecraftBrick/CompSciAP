@@ -4,7 +4,7 @@
 // v1.7
 // The "Sieve of Eratosthenes" Program
 // This is the student, starting version of the Lab11a assignment.
-package lab11;
+package lab11broke;
 
 import java.text.DecimalFormat;
 import java.util.Arrays;
